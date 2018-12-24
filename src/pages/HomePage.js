@@ -2,6 +2,8 @@ import React, { Fragment } from "react";
 import Helmet from "react-helmet";
 import Rotate from "../components/Rotate";
 
+import Panda from "./assets/panda.jpg";
+
 const HomePage = () => (
   <Fragment>
     <Helmet>
@@ -11,6 +13,7 @@ const HomePage = () => (
     <h1>
       <Rotate>{"🚀"}</Rotate>Home!
     </h1>
+    <img src={Panda} alt="" />
   </Fragment>
 );
 

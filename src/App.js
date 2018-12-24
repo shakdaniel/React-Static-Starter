@@ -8,7 +8,13 @@ import Layout from "./templates/Layout";
 
 import Loading from "./components/Loading";
 
-import { HomePage, AboutPage, MenuPage, ContactPage, NoPage } from "./pages";
+import {
+  HomePage,
+  AboutPage,
+  MenuPage,
+  ContactPage,
+  NoPage
+} from "./LazyImports";
 // import HomePage from "./pages/HomePage";
 // import AboutPage from "./pages/AboutPage";
 // import MenuPage from "./pages/MenuPage";
@@ -47,8 +53,9 @@ const GlobalStyle = createGlobalStyle`
 const App = () => (
   <BrowserRouter>
     <ThemeProvider theme={Theme}>
-      <Layout>
-        <Suspense fallback={<Loading />}>
+      <Suspense fallback={<Loading />}>
+        <Layout>
+          <GlobalStyle />
           <Switch>
             <Route path="/" render={() => <HomePage />} exact />
             <Route path="/about" render={() => <AboutPage />} />
@@ -56,9 +63,8 @@ const App = () => (
             <Route path="/contact" render={() => <ContactPage />} />
             <Route render={() => <NoPage />} />
           </Switch>
-          <GlobalStyle />
-        </Suspense>
-      </Layout>
+        </Layout>
+      </Suspense>
     </ThemeProvider>
   </BrowserRouter>
 );

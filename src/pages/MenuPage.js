@@ -2,6 +2,8 @@ import React, { Fragment } from "react";
 import Helmet from "react-helmet";
 import Rotate from "../components/Rotate";
 
+import Rabbits from "./assets/rabbits.jpg";
+
 const MenuPage = () => (
   <Fragment>
     <Helmet>
@@ -11,6 +13,7 @@ const MenuPage = () => (
     <h1>
       <Rotate>{"🍰"}</Rotate>Menu
     </h1>
+    <img src={Rabbits} alt="Rabbits" />
   </Fragment>
 );
 

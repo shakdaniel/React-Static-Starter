@@ -2,6 +2,8 @@ import React, { Fragment } from "react";
 import Helmet from "react-helmet";
 import Rotate from "../components/Rotate";
 
+import Dog from "./assets/dog.jpg";
+
 const AboutPage = () => (
   <Fragment>
     <Helmet>
@@ -11,6 +13,7 @@ const AboutPage = () => (
     <h1>
       <Rotate>{"💩"}</Rotate>About
     </h1>
+    <img src={Dog} alt="Dog" />
   </Fragment>
 );
 

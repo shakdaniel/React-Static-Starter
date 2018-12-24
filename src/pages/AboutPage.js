@@ -14,7 +14,6 @@ const AboutPage = () => (
       <Rotate>{"💩"}</Rotate>About
     </h1>
     <img src={Dog} alt="dog" />
-    {/* <img src={process.env.PUBLIC_URL + "/images/dog.jpg"} alt="dog" /> */}
   </Fragment>
 );
 

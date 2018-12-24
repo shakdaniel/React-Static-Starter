@@ -6,6 +6,5 @@ const AboutPage = lazyImport("./pages/AboutPage");
 const MenuPage = lazyImport("./pages/MenuPage");
 const ContactPage = lazyImport("./pages/ContactPage");
 const NoPage = lazyImport("./pages/NoPage");
-const Image = lazyImport("./components/Image");
 
-export { HomePage, AboutPage, MenuPage, ContactPage, NoPage, Image };
+export { HomePage, AboutPage, MenuPage, ContactPage, NoPage };

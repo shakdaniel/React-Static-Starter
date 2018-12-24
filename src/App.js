@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 import reset from "styled-reset";
@@ -6,20 +6,20 @@ import reset from "styled-reset";
 import Theme from "./templates/Theme";
 import Layout from "./templates/Layout";
 
-import Loading from "./components/Loading";
+// import Loading from "./components/Loading";
 
-import {
-  HomePage,
-  AboutPage,
-  MenuPage,
-  ContactPage,
-  NoPage
-} from "./LazyImports";
-// import HomePage from "./pages/HomePage";
-// import AboutPage from "./pages/AboutPage";
-// import MenuPage from "./pages/MenuPage";
-// import ContactPage from "./pages/ContactPage";
-// import NoPage from "./pages/NoPage";
+// import {
+//   HomePage,
+//   AboutPage,
+//   MenuPage,
+//   ContactPage,
+//   NoPage
+// } from "./LazyImports";
+import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
+import MenuPage from "./pages/MenuPage";
+import ContactPage from "./pages/ContactPage";
+import NoPage from "./pages/NoPage";
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
@@ -53,18 +53,16 @@ const GlobalStyle = createGlobalStyle`
 const App = () => (
   <BrowserRouter>
     <ThemeProvider theme={Theme}>
-      <Suspense fallback={<Loading />}>
-        <Layout>
-          <GlobalStyle />
-          <Switch>
-            <Route path="/" render={() => <HomePage />} exact />
-            <Route path="/about" render={() => <AboutPage />} />
-            <Route path="/menu" render={() => <MenuPage />} />
-            <Route path="/contact" render={() => <ContactPage />} />
-            <Route render={() => <NoPage />} />
-          </Switch>
-        </Layout>
-      </Suspense>
+      <Layout>
+        <GlobalStyle />
+        <Switch>
+          <Route path="/" render={() => <HomePage />} exact />
+          <Route path="/about" render={() => <AboutPage />} />
+          <Route path="/menu" render={() => <MenuPage />} />
+          <Route path="/contact" render={() => <ContactPage />} />
+          <Route render={() => <NoPage />} />
+        </Switch>
+      </Layout>
     </ThemeProvider>
   </BrowserRouter>
 );

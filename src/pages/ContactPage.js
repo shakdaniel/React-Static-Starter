@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import Helmet from "react-helmet";
 import Rotate from "../components/Rotate";
 
-import Cats from "./assets/cats.jpg";
+// import Cats from "../images/cats.jpg";
 
 const ContactPage = () => (
   <Fragment>
@@ -13,7 +13,7 @@ const ContactPage = () => (
     <h1>
       <Rotate>{"💀"}</Rotate>Contact
     </h1>
-    <img src={Cats} alt="Cats" />
+    <img src={process.env.PUBLIC_URL + "/images/cats.jpg"} alt="Cats" />
   </Fragment>
 );
 

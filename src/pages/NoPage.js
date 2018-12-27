@@ -9,7 +9,7 @@ const NoPage = () => (
       <meta name="description" content="Helmet application" />
     </Helmet>
     <h1>
-      <Rotate>{"👀"}</Rotate>NoPage
+      <Rotate>{"👀"}</Rotate> 404
     </h1>
   </Fragment>
 );

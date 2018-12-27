@@ -7,7 +7,7 @@ import Footer from "./Footer";
 const Content = styled.section`
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: auto;
   top: 0;
   background: linear-gradient(#ab64f6, #61dbf7);
 `;

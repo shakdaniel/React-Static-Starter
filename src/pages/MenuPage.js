@@ -11,7 +11,7 @@ const MenuPage = () => (
       <meta name="description" content="Helmet application" />
     </Helmet>
     <h1>
-      <Rotate>{"🍰"}</Rotate>Menu
+      <Rotate>{"🍰"}</Rotate> Menu
     </h1>
     <img src={Rabbits} alt="Rabbits" />
   </Fragment>

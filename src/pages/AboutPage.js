@@ -11,7 +11,7 @@ const AboutPage = () => (
       <meta name="description" content="Helmet application" />
     </Helmet>
     <h1>
-      <Rotate>{"💩"}</Rotate>About
+      <Rotate>{"💩"}</Rotate> About
     </h1>
     <img src={Dog} alt="dog" />
   </Fragment>
